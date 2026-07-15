@@ -1,27 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: 220 47% 8%;
+    --foreground: 210 40% 98%;
+    --card: 220 30% 10%;
+    --card-foreground: 210 40% 98%;
+    --border: 220 20% 15%;
+    --input: 220 20% 15%;
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 30% 14%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 220 25% 18%;
+    --muted-foreground: 215 16% 57%;
+    --accent: 220 25% 18%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --ring: 217 91% 60%;
+    --radius: 0.75rem;
+    --success: 160 84% 39%;
+  }
+
+  * {
+    @apply border-border;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-text-primary;
+    background-color: #0A0F1E;
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+  }
+
+  ::selection {
+    background-color: rgba(59, 130, 246, 0.3);
+    color: #F9FAFB;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #111827;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #374151;
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #4B5563;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  .btn-primary {
+    @apply bg-primary hover:bg-primary-dark text-white font-semibold px-6 py-3 rounded-xl transition-all duration-200 hover:shadow-glow active:scale-95;
+  }
+
+  .btn-success {
+    @apply bg-success hover:bg-success-dark text-white font-semibold px-6 py-3 rounded-xl transition-all duration-200 hover:shadow-glow-green active:scale-95;
+  }
+
+  .btn-ghost {
+    @apply text-text-secondary hover:text-text-primary hover:bg-background-elevated px-4 py-2 rounded-lg transition-all duration-200;
+  }
+
+  .card {
+    @apply bg-background-card border border-border rounded-2xl shadow-card;
+  }
+
+  .card-hover {
+    @apply card hover:border-primary/30 hover:shadow-card-hover transition-all duration-300;
+  }
+
+  .glass {
+    @apply bg-white/5 backdrop-blur-md border border-white/10;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary to-success bg-clip-text text-transparent;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold text-text-primary font-display;
+  }
+
+  .input-field {
+    @apply w-full bg-background-elevated border border-border rounded-xl px-4 py-3 text-text-primary placeholder-text-muted focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all duration-200;
+  }
+
+  .nav-link {
+    @apply flex items-center gap-3 px-4 py-3 rounded-xl text-text-secondary hover:text-text-primary hover:bg-background-elevated transition-all duration-200 font-medium;
+  }
+
+  .nav-link-active {
+    @apply flex items-center gap-3 px-4 py-3 rounded-xl text-primary bg-primary/10 border border-primary/20 font-semibold;
+  }
+
+  .progress-bar-bg {
+    @apply h-2 bg-background-elevated rounded-full overflow-hidden;
+  }
+
+  .progress-bar-fill {
+    @apply h-full rounded-full transition-all duration-700 ease-out;
+  }
+
+  .badge-easy {
+    @apply text-xs font-medium px-2 py-0.5 rounded-full bg-success/15 text-success border border-success/30;
+  }
+
+  .badge-medium {
+    @apply text-xs font-medium px-2 py-0.5 rounded-full bg-accent-orange/15 text-accent-orange border border-accent-orange/30;
+  }
+
+  .badge-hard {
+    @apply text-xs font-medium px-2 py-0.5 rounded-full bg-accent-red/15 text-accent-red border border-accent-red/30;
+  }
+
+  .stat-card {
+    @apply card p-5 flex flex-col gap-2;
+  }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .animation-delay-100 { animation-delay: 100ms; }
+  .animation-delay-200 { animation-delay: 200ms; }
+  .animation-delay-300 { animation-delay: 300ms; }
+  .animation-delay-400 { animation-delay: 400ms; }
+  .animation-delay-500 { animation-delay: 500ms; }
+
+  .glow-blue {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+  }
+
+  .glow-green {
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.4);
   }
 }
