@@ -1,0 +1,65 @@
+<svg width="600" height="600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A0F1E"/>
+      <stop offset="50%" stop-color="#0D1B3E"/>
+      <stop offset="100%" stop-color="#0A0F1E"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1A2235"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="600" fill="url(#bgGrad)"/>
+
+  <rect x="50" y="50" width="500" height="500" rx="30" fill="url(#cardGrad)" stroke="#1F2937" stroke-width="2"/>
+
+  <rect x="50" y="50" width="500" height="6" rx="3" fill="url(#accentGrad)"/>
+
+  <rect x="245" y="100" width="110" height="110" rx="24" fill="url(#accentGrad)"/>
+  <g transform="translate(265, 120)">
+    <path d="M 0 60 Q 18 -5 36 15 L 36 70 Q 18 50 0 75 Z" fill="white" opacity="0.9"/>
+    <path d="M 36 15 Q 54 -5 72 60 L 72 75 Q 54 50 36 70 Z" fill="white" opacity="0.7"/>
+    <line x1="36" y1="15" x2="36" y2="70" stroke="white" stroke-width="2" opacity="0.5"/>
+  </g>
+
+  <text x="300" y="275" text-anchor="middle" font-family="Arial, sans-serif" font-size="42" font-weight="bold" fill="#F9FAFB">Meta ENEM</text>
+
+  <rect x="210" y="290" width="180" height="4" rx="2" fill="url(#accentGrad)"/>
+
+  <text x="300" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#9CA3AF">Plataforma Completa de Estudos</text>
+
+  <rect x="90" y="370" width="200" height="34" rx="17" fill="#1A2235" stroke="#1F2937" stroke-width="1"/>
+  <circle cx="118" cy="387" r="6" fill="#3B82F6"/>
+  <text x="134" y="392" font-family="Arial, sans-serif" font-size="13" fill="#F9FAFB">5 Matérias Completas</text>
+
+  <rect x="310" y="370" width="200" height="34" rx="17" fill="#1A2235" stroke="#1F2937" stroke-width="1"/>
+  <circle cx="338" cy="387" r="6" fill="#10B981"/>
+  <text x="354" y="392" font-family="Arial, sans-serif" font-size="13" fill="#F9FAFB">130+ Tópicos</text>
+
+  <rect x="90" y="415" width="200" height="34" rx="17" fill="#1A2235" stroke="#1F2937" stroke-width="1"/>
+  <circle cx="118" cy="432" r="6" fill="#F59E0B"/>
+  <text x="134" y="437" font-family="Arial, sans-serif" font-size="13" fill="#F9FAFB">Pomodoro Integrado</text>
+
+  <rect x="310" y="415" width="200" height="34" rx="17" fill="#1A2235" stroke="#1F2937" stroke-width="1"/>
+  <circle cx="338" cy="432" r="6" fill="#8B5CF6"/>
+  <text x="354" y="437" font-family="Arial, sans-serif" font-size="13" fill="#F9FAFB">Progresso Visual</text>
+
+  <rect x="180" y="475" width="240" height="50" rx="25" fill="url(#accentGrad)"/>
+  <text x="300" y="507" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="white">R$ 97 ou 12x R$ 9,70</text>
+
+  <g opacity="0.6">
+    <text x="520" y="140" font-size="18" fill="#F59E0B">&#9733;</text>
+    <text x="65" y="480" font-size="14" fill="#F59E0B">&#9733;</text>
+    <text x="510" y="370" font-size="12" fill="#F59E0B">&#9733;</text>
+    <text x="80" y="160" font-size="12" fill="#F59E0B">&#9733;</text>
+  </g>
+
+  <rect x="420" y="75" width="110" height="30" rx="15" fill="#3B82F6" opacity="0.2" stroke="#3B82F6" stroke-width="1" stroke-opacity="0.3"/>
+  <text x="475" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#60A5FA">NOVO</text>
+</svg>

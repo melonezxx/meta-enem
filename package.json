@@ -1,7 +1,8 @@
 {
   "name": "meta-enem",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "description": "Plataforma completa de estudos para o ENEM",
+  "private": false,
   "scripts": {
     "dev": "next dev",
     "build": "next build",

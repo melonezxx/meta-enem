@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Meta ENEM
 
-## Getting Started
+Plataforma completa de estudos para o ENEM. Organize seus estudos, acompanhe seu progresso e conquiste sua aprovação.
 
-First, run the development server:
+## Funcionalidades
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- 5 matérias com 130+ tópicos organizados em módulos
+- Checklists inteligentes com progresso automático
+- Anotações por tópico com salvamento automático
+- Timer Pomodoro integrado
+- Plano de estudos semanal personalizado
+- Gráficos de progresso detalhados
+- Marcação de dificuldade por tópico
+- Favoritos e marcadores
+- Autenticação via Supabase
+- Modo escuro
+
+## Tecnologias
+
+- Next.js 14 (App Router)
+- TypeScript
+- Tailwind CSS
+- Supabase (Auth + Storage)
+- Zustand (estado global)
+- Recharts (gráficos)
+- Framer Motion (animações)
+- Radix UI (componentes acessíveis)
+
+## Pré-requisitos
+
+- Node.js 18+
+- Conta no Supabase (gratuita)
+
+## Configuração
+
+1. Clone o repositório
+2. Instale as dependências: `npm install`
+3. Crie um arquivo `.env.local` com as variáveis:
+
+```
+NEXT_PUBLIC_SUPABASE_URL=sua_url_do_supabase
+NEXT_PUBLIC_SUPABASE_ANON_KEY=sua_chave_anon_do_supabase
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Inicie o servidor: `npm run dev`
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Configuração do Supabase
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Crie um projeto no [Supabase](https://supabase.com)
+2. No Authentication > Providers, habilite "Email" com "Confirm email" desabilitado
+3. Copie as credenciais do projeto para o `.env.local`
 
-## Learn More
+## Build
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run build
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deploy
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+O deploy pode ser feito na [Vercel](https://vercel.com) ou qualquer plataforma que suporte Next.js.
 
-## Deploy on Vercel
+## Licença
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Todos os direitos reservados.

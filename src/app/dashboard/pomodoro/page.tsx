@@ -14,6 +14,7 @@ const MODES: Record<Mode, { label: string; duration: number; color: string }> = 
 function beep() {
   try {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const ctx = new (window.AudioContext || (window as any).webkitAudioContext)();
     const oscillator = ctx.createOscillator();
     const gainNode = ctx.createGain();

@@ -142,6 +142,7 @@ export default function ProgressoPage() {
               <Tooltip
                 {...tooltipStyle}
                 // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
                 formatter={(v: any) => [`${v}%`, "Progresso"]}
               />
               <Bar dataKey="pct" radius={[6, 6, 0, 0]}>
@@ -201,6 +202,7 @@ export default function ProgressoPage() {
             <YAxis tick={{ fill: "#6B7280", fontSize: 10 }} axisLine={false} tickLine={false} />
             <Tooltip
               {...tooltipStyle}
+              // eslint-disable-next-line @typescript-eslint/no-explicit-any
               // eslint-disable-next-line @typescript-eslint/no-explicit-any
               formatter={(v: any) => [`${v} min`, "Estudo"]}
             />

@@ -200,6 +200,7 @@ export default function DashboardHome() {
                   color: "#F9FAFB",
                 }}
                 // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
                 formatter={(v: any) => [`${v} min`, "Tempo"]}
               />
               <Bar dataKey="minutes" radius={[6, 6, 0, 0]}>
