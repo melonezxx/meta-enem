@@ -46,47 +46,6 @@ function BuyModal({ onClose, planName, price }: BuyModalProps) {
   );
 }
 
-const plans = [
-  {
-    id: "basic",
-    name: "Plano Básico",
-    price: "R$ 47",
-    priceDetail: "/mês",
-    description: "Para quem está começando a preparação",
-    features: [
-      "Acesso a 2 matérias",
-      "Checklists básicos",
-      "Progresso individual",
-      "Suporte por e-mail",
-    ],
-    notIncluded: ["Pomodoro", "Plano de estudos", "Todas as matérias", "Anotações ilimitadas"],
-    cta: "Começar Básico",
-    popular: false,
-  },
-  {
-    id: "complete",
-    name: "Plano Completo",
-    price: "R$ 97",
-    priceDetail: " único",
-    description: "Para quem quer passar com excelência",
-    features: [
-      "Todas as 5 matérias",
-      "Checklists inteligentes",
-      "Progresso visual com gráficos",
-      "Pomodoro integrado",
-      "Plano de estudos personalizado",
-      "Anotações por tópico",
-      "Favoritos e marcadores",
-      "Acesso vitalício",
-      "Suporte prioritário",
-    ],
-    notIncluded: [],
-    cta: "Quero Comprar",
-    popular: true,
-    originalPrice: "R$ 297",
-  },
-];
-
 export default function PricingSection() {
   const [modal, setModal] = useState<{ name: string; price: string } | null>(null);
 
@@ -99,85 +58,74 @@ export default function PricingSection() {
             <span className="text-accent-orange text-sm font-medium">Oferta por tempo limitado</span>
           </div>
           <h2 className="section-title mb-4">
-            Planos simples,{" "}
+            O plano mais completo,{" "}
             <span className="gradient-text">resultados extraordinários</span>
           </h2>
           <p className="text-text-secondary max-w-2xl mx-auto text-lg">
-            Escolha o plano ideal para sua preparação e comece hoje mesmo.
+            Tudo que você precisa para passar no ENEM em um único plano.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          {plans.map((plan) => (
-            <div
-              key={plan.id}
-              className={`relative card p-8 flex flex-col ${
-                plan.popular
-                  ? "border-primary/40 shadow-glow ring-1 ring-primary/20"
-                  : "border-border"
-              }`}
-            >
-              {plan.popular && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                  <div className="bg-gradient-to-r from-primary to-success text-white text-xs font-bold px-4 py-1.5 rounded-full shadow-glow">
-                    ⭐ MAIS POPULAR
-                  </div>
-                </div>
-              )}
-
-              <div className="mb-6">
-                <h3 className="font-display font-bold text-text-primary text-xl mb-1">
-                  {plan.name}
-                </h3>
-                <p className="text-text-muted text-sm">{plan.description}</p>
+        <div className="max-w-lg mx-auto">
+          <div className="relative card p-8 flex flex-col border-primary/40 shadow-glow ring-1 ring-primary/20">
+            <div className="absolute -top-4 left-1/2 -translate-x-1/2">
+              <div className="bg-gradient-to-r from-primary to-success text-white text-xs font-bold px-4 py-1.5 rounded-full shadow-glow">
+                ⭐ ÚNICO PLANO
               </div>
-
-              <div className="mb-6">
-                {plan.originalPrice && (
-                  <div className="text-text-muted text-sm line-through mb-1">
-                    De {plan.originalPrice}
-                  </div>
-                )}
-                <div className="flex items-baseline gap-1">
-                  <span className="text-4xl font-bold font-display text-text-primary">
-                    {plan.price}
-                  </span>
-                  <span className="text-text-muted">{plan.priceDetail}</span>
-                </div>
-                {plan.originalPrice && (
-                  <div className="mt-2 inline-flex items-center gap-1 bg-success/10 border border-success/20 rounded-full px-3 py-1">
-                    <span className="text-success text-xs font-medium">
-                      🎉 Economize R$ 200 hoje
-                    </span>
-                  </div>
-                )}
-              </div>
-
-              <div className="flex-1 mb-6">
-                <div className="space-y-3">
-                  {plan.features.map((f) => (
-                    <div key={f} className="flex items-center gap-3">
-                      <CheckCircle2 className="w-4 h-4 text-success flex-shrink-0" />
-                      <span className="text-text-secondary text-sm">{f}</span>
-                    </div>
-                  ))}
-                  {plan.notIncluded.map((f) => (
-                    <div key={f} className="flex items-center gap-3 opacity-40">
-                      <X className="w-4 h-4 text-text-muted flex-shrink-0" />
-                      <span className="text-text-muted text-sm">{f}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <button
-                onClick={() => setModal({ name: plan.name, price: plan.price })}
-                className={plan.popular ? "btn-success" : "btn-primary"}
-              >
-                {plan.cta}
-              </button>
             </div>
-          ))}
+
+            <div className="mb-6 mt-4">
+              <h3 className="font-display font-bold text-text-primary text-xl mb-1">
+                Plano Completo
+              </h3>
+              <p className="text-text-muted text-sm">Para quem quer passar com excelência</p>
+            </div>
+
+            <div className="mb-6">
+              <div className="text-text-muted text-sm line-through mb-1">
+                De R$ 297
+              </div>
+              <div className="flex items-baseline gap-1">
+                <span className="text-4xl font-bold font-display text-text-primary">
+                  R$ 97
+                </span>
+                <span className="text-text-muted"> único</span>
+              </div>
+              <div className="mt-2 inline-flex items-center gap-1 bg-success/10 border border-success/20 rounded-full px-3 py-1">
+                <span className="text-success text-xs font-medium">
+                  🎉 Economize R$ 200 hoje
+                </span>
+              </div>
+            </div>
+
+            <div className="flex-1 mb-6">
+              <div className="space-y-3">
+                {[
+                  "Todas as 5 matérias",
+                  "Checklists inteligentes",
+                  "Progresso visual com gráficos",
+                  "Pomodoro integrado",
+                  "Plano de estudos personalizado",
+                  "Anotações por tópico",
+                  "Favoritos e marcadores",
+                  "Acesso vitalício",
+                  "Suporte prioritário",
+                ].map((f) => (
+                  <div key={f} className="flex items-center gap-3">
+                    <CheckCircle2 className="w-4 h-4 text-success flex-shrink-0" />
+                    <span className="text-text-secondary text-sm">{f}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <button
+              onClick={() => setModal({ name: "Plano Completo", price: "R$ 97" })}
+              className="btn-success"
+            >
+              Quero Comprar
+            </button>
+          </div>
         </div>
 
         {/* Guarantee */}
